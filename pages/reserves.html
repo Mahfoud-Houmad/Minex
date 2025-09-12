@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/icons/websiteIcon.png" />
+    <meta
+      name="description"
+      content="Morocco holds over 70% of the world’s phosphate reserves. Learn about major deposits at Khouribga, Gantour, Benguerir, and Bou Craa, and their global significance."
+    />
+    <meta name="keywords" content="phosphate reserves, Morocco phosphate, mining resources, phosphate deposits, geological surveys, phosphate industry, mineral resources, global phosphate supply" />
+
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/reservesPage/reservesPage.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <title>Minex | Reserves</title>
+  </head>
+
+  <body>
+    <header>
+
+    </header>
+
+    <section class="hero-section">
+      <img
+        src="../assets/images/hero-4.png"
+        alt="History Banner"
+        class="hero-image"
+      />
+
+      <!-- breadcrumb -->
+      <div class="breadcrumb">
+        <a href="/index.html" class="breadcrumb-home">
+          <img src="../assets/icons/home-icon.png" alt="Home Icon" />
+          <span>Home</span>
+        </a>
+        <span class="breadcrumb-separator"> - </span>
+        <span class="breadcrumb-current">Reserves</span>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-left">
+          <span class="vertical-text">Morocco</span>
+        </div>
+        <div class="hero-right">
+          <h3>
+            Over 50 billion tonnes of phosphate rock spread across key sites
+            fueling food security worldwide
+          </h3>
+          <p>
+            Positioned at the crossroads of Africa and Europe, Morocco holds
+            over 70% of the world’s phosphate reserves, making it the undisputed
+            leader in this vital mineral resource. From the vast mining sites of
+            Khouribga to the rich deposits in Bou Craa, Morocco’s phosphate
+            industry fuels global agriculture and industry.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reserves-section">
+
+      <h2 class="reserves-title">Morocco’s Phosphate Reserves</h2>
+
+      <div class="reserves-buttons">
+        <button class="reserve-btn active" data-reserve="khouribga">
+          Khouribga
+        </button>
+        <button class="reserve-btn" data-reserve="gantour">
+          Gantour / Benguerir
+        </button>
+        <button class="reserve-btn" data-reserve="boucraa">Boucraa</button>
+        <button class="reserve-btn" data-reserve="youssoufia">
+          Youssoufia
+        </button>
+      </div>
+
+      <p class="reserve-intro">
+        Khouribga, Morocco’s largest phosphate reserve, is the beating heart of
+        global phosphate supply.
+      </p>
+
+      <div class="reserve-content">
+        <div class="reserve-image">
+          <img src="../assets/images/resreves-1.jpg" alt="Khouribga Reserve" />
+        </div>
+        <div class="reserve-details">
+          <p>
+            The Khouribga mine, discovered in 1917, is the world’s largest
+            phosphate deposit. Its strategic location and massive reserves make
+            Morocco the global leader in phosphate production. The region plays
+            a crucial role in both domestic development and international
+            agriculture.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <h2 class="map-title">Morocco’s Phosphate Reserves</h2>
+      <div id="map"></div>
+    </section>
+
+    <footer class="footer"></footer>
+
+    <script src="/js/include.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../js/reserveSection.js"></script>
+  </body>
+</html>

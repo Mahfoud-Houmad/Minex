@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/icons/websiteIcon.png" />
+    <meta
+      name="description"
+      content="Explore key phosphate machines in Morocco’s industry: mining rigs, crushers, flotation units, conveyor belts, and port loaders powering the full phosphate value chain."
+    />
+    <meta name="keywords" content="phosphate machinery, mining equipment, beneficiation machines, chemical plant equipment, fertilizer production, Morocco, excavation, crushing, screening, mining technology" />
+
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/machinesPage/machinesPage.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <title>Minex | Machines</title>
+  </head>
+
+  <body>
+    <header>
+
+    </header>
+
+    <section class="head-sec">
+      <h1>
+        The <span class="green-text">Engineering Backbone</span> of <br />
+        Phosphate Production
+      </h1>
+      <p>
+        Explore the cutting-edge machinery powering Morocco’s phosphate
+        industry—from colossal excavators that unearth raw ore to precision
+        reactors transforming it into vital fertilizers. Each piece of equipment
+        is meticulously engineered to maximize efficiency, safety, and
+        sustainability. Click on any machine to discover its role, technical
+        specifications, and how it drives the global phosphate value chain.
+      </p>
+    </section>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search machinery name..."
+      />
+      <button onclick="searchMachines()">Search</button>
+    </div>
+
+    <div class="categories">
+      <div class="category active" onclick="selectCategory('mining')">
+        Mining
+      </div>
+      <div class="category" onclick="selectCategory('beneficiation')">
+        Beneficiation
+      </div>
+      <div class="category" onclick="selectCategory('chemicals')">
+        Chemicals & Fertilizers
+      </div>
+      <div class="category" onclick="selectCategory('logistics')">
+        Products & Logistics
+      </div>
+    </div>
+
+    <div class="steps-bar" id="stepsBar">
+
+    </div>
+
+    <div class="machines-grid" id="machinesGrid">
+
+    </div>
+
+    <div class="overlay" id="overlay">
+      <div class="overlay-content">
+        <button class="close-btn" onclick="closeOverlay()">×</button>
+        <h2 id="overlayTitle"></h2>
+        <div class="overlay-images" id="overlayImages">
+
+        </div>
+        <p id="overlayParaBefore">
+
+        </p>
+        <table class="overlay-table" id="overlayTable"></table>
+        <p id="overlayParaAfter">
+
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script src="../js/machines.js"></script>
+    <script src="/js/include.js"></script>
+  </body>
+</html>

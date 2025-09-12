@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/icons/websiteIcon.png" />
+    <meta
+      name="description"
+      content="Get in touch with us to learn more about Morocco’s phosphate industry."
+    />
+    <meta name="keywords" content="phosphate, mining, industrie, Maroc" />
+
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <title>Minex | Contact Us</title>
+    
+    <link rel="stylesheet" href="/css/contact.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "3gShPGepnTtlPGl8g",
+        });
+      })();
+    </script>
+  </head>
+
+  <body>
+    <header>
+      
+    </header>
+
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Your name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Write your name ..."
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Write your email ..."
+          required
+        />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message ..."
+          required
+        ></textarea>
+
+        <div class="checkbox">
+          <input type="checkbox" id="policy" required />
+          <label for="policy"
+            >By submitting this form, you agree to our
+            <a href="#">Privacy Policy</a></label
+          >
+        </div>
+
+        <button type="button" onclick="sendMail()">Send</button>
+      </form>
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script src="/js/include.js"></script>
+    <script src="../js/contact.js"></script>
+  </body>
+</html>
