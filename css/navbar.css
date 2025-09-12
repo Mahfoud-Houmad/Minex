@@ -1,0 +1,256 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:'SF Pro Display', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 0px 2.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000
+}
+
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.18rem;
+  font-weight: bold;
+  background: linear-gradient(to right,#229652, #13a798);
+  width: 9rem;
+  height: 2.7rem;
+  border-radius: 25px;
+  transition: all ease 2s;
+}
+
+.logo {
+  display: flex;
+  gap: 0.62rem;
+  align-items: center;
+}
+
+.logo a {
+  color: #229652;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.logo img {
+  width: 3.55rem;
+  height: 3.7rem;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.56rem;
+  align-items: center;
+}
+
+.nav-links li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links li img:not(.dropdown-menu img) {
+  display: none;
+}
+
+.nav-links li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.dropdown li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.dropdown li img{
+  display: none;
+}
+.contact li a{
+  color: white;
+  transition: all ease 1s;
+}
+
+.nav-links li:hover a:not(.dropdown-menu a) {
+  color: #00A896; 
+}
+
+.nav-links li:hover img:not(.dropdown-menu img) {
+  display: block; 
+}
+
+.contact:hover{
+  background: linear-gradient(to right,#F5F5F5, #F5F5F5);
+}
+
+.contact:hover li a {
+  background: radial-gradient(#00A896, #00423B);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  list-style: none;
+  top: 4.074rem;
+  right: 12.5rem;
+  box-shadow: -3px 3px 10px rgba(142, 142, 142, 0.25);
+  border-radius: 0px 0px 15px 15px;
+  width: 20.86rem;
+  padding: 0rem;
+}
+
+.dropdown-menu .back-btn {
+  display: none;
+}
+
+.dropdown-menu li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 16px 20px 16px 20px;
+}
+
+.dropdown-menu li img{
+  display: none;
+}
+
+.dropdown-menu li a {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  text-decoration: none;
+}
+.dropdown-menu li:hover a {
+  color: rgba(0, 0, 0); 
+}
+.dropdown-menu li:hover img {
+  display: block;
+}
+.dropdown-menu li:hover  {
+  box-shadow: -3px 3px 10px rgba(142, 142, 142, 0.25);
+  border-radius: 0px 0px 15px 15px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 1030px) {
+  html{
+    font-size: 14px;
+  }
+}
+@media (max-width: 970px) {
+  html{
+    font-size: 13px;
+  }
+}
+@media (max-width: 870px) {
+  html{
+    font-size: 12px;
+  }
+}
+@media (max-width: 790px) {
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top: 45.9px;
+    padding: 20px;
+    margin: 0px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    font-weight: bold;
+  }
+  
+  .nav-links li:not(.contact li) {
+    width: 100vw;
+    padding: 20px;
+    border-bottom: 1px solid #00A896;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .contact {
+    width: 100vw;
+    border-radius:0 ;
+    padding: 2.5rem;
+  }
+  .nav-links.active {
+    display: flex;
+    padding: 0;
+    gap:0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    position: absolute;
+    top: 45px;
+    margin: 0px;
+    font-weight: bold;
+  }
+  
+  .dropdown-menu li:not(.logistics) {
+    width: 100vw;
+    padding: 20px;
+    border-bottom: 1px solid #00A896;
+  }
+  .dropdown-menu .back-btn{
+      display: block; 
+      background-color: #117a16;
+  }
+  
+  .dropdown-menu .back-btn button{
+     background-color: transparent;
+     border: unset;
+     font-weight: bold;
+     color: white;
+  }
+
+  /* Show the dropdown menu when active */
+  .dropdown.show-dropdown .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hide the main nav when the dropdown is active */
+  .nav-links.hide-main {
+    display: none;
+  }
+ 
+}
