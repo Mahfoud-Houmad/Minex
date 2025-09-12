@@ -1,0 +1,234 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 60vh;            
+  object-fit: cover;        
+  display: block;
+}
+
+.breadcrumb {
+  position: absolute;
+  top: 25%;
+  left: 12.4%;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+.breadcrumb-home {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.breadcrumb-home img {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.breadcrumb-separator {
+  margin: 0 8px;
+  color: black;
+  font-weight: bold;
+}
+
+.breadcrumb-current {
+  color: #256921;
+  font-weight: bold;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 10%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  border-radius: 20px;
+  padding: 20px 40px;
+  background-color: rgba(232, 232, 232, 0);
+  color: #000;
+}
+
+.green {
+  color:#256921 ;
+}
+.hero-right h1 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-right p {
+  font-size: clamp(1.1rem, 1.5vw, 1rem);
+  line-height: 1.5;
+}
+
+
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-left {
+    order: 2; 
+  }
+
+  .hero-right {
+    order: 1;
+    text-align: center;
+  }
+
+  .vertical-text {
+    display: none; 
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image {
+    height: 60vh; 
+  }
+
+  .hero-content {
+    top: 25%;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .hero-right h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero-right p {
+    font-size: 0.85rem;
+  }
+  
+  .breadcrumb {
+    top: 15%;
+    left: 6%;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+}
+
+
+/*-------------------------------------------------------cards section -----------------------------------*/
+
+
+.cards-section {
+  width: 100%;
+  padding: 80px 5%;
+  background: #fff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+button {
+border: none;
+background-color:transparent;
+margin-top: 1rem;
+color: #555;
+cursor: pointer;
+transition: all ease-in 0.1s;
+}
+
+button:hover {
+color: #000000;
+cursor: pointer;
+transform: scale(1.08);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.tag {
+  display: inline-block;
+  background: #299521;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+  .card img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.4rem;
+  }
+  .card img {
+    height: 140px;
+  }
+}
