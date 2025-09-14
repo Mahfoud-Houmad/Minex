@@ -32,16 +32,15 @@ fetch("/header.html")
                   // Show the dropdown menu and hide the main nav
                   valueChainLink.addEventListener('click', function (e) {
                     e.preventDefault();
-                    navLinks.classList.add('hide-main'); // Hide main nav
-                    dropdownMenu.classList.add('show-dropdown'); // Show dropdown menu
+                    navLinks.classList.add('hide-main'); 
+                    dropdownMenu.classList.add('show-dropdown'); 
                   });
 
-                  // Back button logic: Show the main nav and hide the dropdown menu
                   backBtn.addEventListener('click', function (e) {
                     e.preventDefault();
                     dropdownMenu.classList.remove('show-dropdown');
                     dropdownMenu.style.display = 'none';
-                    navLinks.classList.remove('hide-main'); // 
+                    navLinks.classList.remove('hide-main'); 
                   });
     });
 
@@ -49,5 +48,6 @@ fetch("/header.html")
 fetch("/footer.html")
   .then(r => r.text())
   .then(html => document.querySelector("footer").innerHTML = html);
+
 
 
