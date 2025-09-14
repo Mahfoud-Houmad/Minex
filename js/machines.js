@@ -281,7 +281,7 @@
               },
               {
                 name: "Road graders + routine maintenance fleets",
-                img: "/assets/images/mining/Dust & road management/Road graders + routine maintenance fleets.jpg",
+                img: "/assets/images/mining/Dust & road management/Road graders.jpg",
                 details: {
                   "Blade Length": "Varies based on model",
                   Maneuverability: "High, suitable for various terrains",
@@ -1128,4 +1128,5 @@
       }
 
       // Init
+
       renderSteps("mining");
