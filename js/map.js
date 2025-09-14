@@ -1,4 +1,4 @@
-// Données des sites de phosphate
+
 const phosphateSites = [
     {
         id: 1,
@@ -30,23 +30,21 @@ const phosphateSites = [
     }
 ];
 
-// Initialisation de la carte centrée sur le Maroc
 const map = L.map('map').setView([29.985, -7.5], 6);
 
-// Ajout de la couche de tuiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 9,
     minZoom: 5
 }).addTo(map);
 
-// Définition des limites approximatives du Maroc pour restreindre la vue
+
 map.setMaxBounds([
-    [20, -18], // Sud-Ouest
-    [36, 0]    // Nord-Est
+    [20, -18], 
+    [36, 0]    
 ]);
 
-// Fonction pour créer un marqueur personnalisé
+
 function createCustomMarker(site) {
     const marker = L.marker(site.latlng, {
         icon: L.divIcon({
@@ -57,12 +55,12 @@ function createCustomMarker(site) {
         })
     }).addTo(map);
     
-    // Ajout d'un événement de clic
+  
     marker.on('click', function() {
         showSiteInfo(site);
     });
     
-    // Création d'une étiquette flottante
+   
     const label = L.marker(site.latlng, {
         icon: L.divIcon({
             className: 'map-label',
@@ -72,7 +70,7 @@ function createCustomMarker(site) {
         })
     }).addTo(map);
     
-    // Affichage de l'étiquette au survol
+    
     marker.on('mouseover', function() {
         label.getElement().style.opacity = 1;
     });
@@ -82,21 +80,22 @@ function createCustomMarker(site) {
     });
 }
 
-// Ajout des marqueurs pour chaque site
+
 phosphateSites.forEach(site => {
     createCustomMarker(site);
 });
 
-// Fonction pour afficher les informations du site
+
 function showSiteInfo(site) {
     document.querySelector('.region-name').textContent = site.name;
     document.querySelector('.percentage').textContent = site.reserves + '%';
     document.querySelector('.region-description').textContent = site.description;
     
-    // Animation de la barre de progression
+
     const progressBar = document.getElementById('reserve-progress');
     progressBar.style.width = '0';
     setTimeout(() => {
         progressBar.style.width = site.reserves + '%';
     }, 100);
+
 }
