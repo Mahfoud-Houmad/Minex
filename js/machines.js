@@ -293,7 +293,7 @@
                 paraAfter:
                   "In Moroccan phosphate mines, these tools are essential for maintaining access roads, ensuring that heavy machinery can operate efficiently and safely.", // nouveau paragraphe après le tableau
                 extra: [
-                  "/assets/images/mining/Dust & road management/Road graders + routine maintenance fleets.jpg",
+                  "/assets/images/mining/Dust & road management/Road graders.jpg",
                 ],
               },
             ],
@@ -1130,4 +1130,5 @@
      
 
       renderSteps("mining");
+
 
