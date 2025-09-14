@@ -1019,14 +1019,14 @@
 
       function renderSteps(category) {
         const steps = data[category].steps;
-        const stepImages = data[category].stepImages; // <-- nouvelle ligne
+        const stepImages = data[category].stepImages; 
         const stepsBar = document.getElementById("stepsBar");
         stepsBar.innerHTML = "";
         steps.forEach((step, idx) => {
           const div = document.createElement("div");
           div.className = "step" + (idx === 0 ? " active" : "");
 
-          // Ajouter l'image à la step
+          
           div.innerHTML = `
       <img src="${stepImages[idx]}" alt="${step}" style="width:120px;height:120px;display:block;margin:0 auto 2rem;">
       <span>${step}</span>
@@ -1094,11 +1094,11 @@
       function openOverlay(machine) {
         document.getElementById("overlayTitle").innerText = machine.name;
 
-        // Paragraphe avant le tableau
+        
         document.getElementById("overlayParaBefore").innerText =
           machine.paraBefore || "";
 
-        // remplir le tableau
+        
         const table = document.getElementById("overlayTable");
         table.innerHTML = "";
         for (const key in machine.details) {
@@ -1107,11 +1107,11 @@
           table.appendChild(row);
         }
 
-        // Paragraphe après le tableau
+        
         document.getElementById("overlayParaAfter").innerText =
           machine.paraAfter || "";
 
-        // remplir images
+        
         const overlayImages = document.getElementById("overlayImages");
         overlayImages.innerHTML = "";
         machine.extra.forEach((img) => {
@@ -1127,6 +1127,7 @@
         document.getElementById("overlay").style.display = "none";
       }
 
-      // Init
+     
 
       renderSteps("mining");
+
