@@ -11,11 +11,11 @@ const track = document.querySelector('.carousel-track');
     if (newIndex >= cards.length) newIndex = 0;
     index = newIndex;
 
-    // largeur d'une carte + margin (ajustement pour centrage)
+
     const cardWidth = cards[0].offsetWidth + 30; 
     const carouselWidth = document.querySelector('.carousel').offsetWidth;
 
-    // calcul du décalage pour centrer la carte active
+
     const offset = (carouselWidth - cardWidth) / 2;
 
     track.style.transform = `translateX(${-index * cardWidth + offset}px)`;
@@ -29,6 +29,6 @@ const track = document.querySelector('.carousel-track');
   prevBtn.addEventListener('click', () => updateSlider(index - 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => updateSlider(i)));
 
-  // Initial centering
   window.addEventListener("load", () => updateSlider(0));
+
   window.addEventListener("resize", () => updateSlider(index));
