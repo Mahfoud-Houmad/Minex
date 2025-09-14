@@ -29,7 +29,6 @@ const details = document.querySelector(".reserve-details p");
 
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
-    // désactiver tous
     buttons.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
@@ -64,11 +63,12 @@ buttons.forEach(btn => {
     var marker = L.marker(reserve.coords).addTo(map)
       .bindTooltip("<b>" + reserve.name + "</b>");
 
-    // Lorsqu’on clique sur le marker -> redirige vers Google Maps
+    
     marker.on('click', function() {
       var lat = reserve.coords[0];
       var lng = reserve.coords[1];
       var url = `https://www.google.com/maps?q=${lat},${lng}`;
-      window.open(url, '_blank'); // ouvre dans un nouvel onglet
+      window.open(url, '_blank'); 
     });
+
   });
